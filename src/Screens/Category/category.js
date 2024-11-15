@@ -13,7 +13,6 @@ const CategoryScreen = ({ navigation }) => {
         onPress={() => navigation.navigate('Produtos da Categoria', { itemId: item.products_category_id, itemName: item.category_name })}
       >
         <ImageBackground 
-          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/fashion2.png' }} // URL da imagem de fundo
           style={styles.imageBackground} // Estilo para fazer a imagem ocupar 100% do TouchableOpacity
           imageStyle={styles.image} // Garantir que a imagem seja corretamente dimensionada
         >
@@ -31,7 +30,7 @@ const CategoryScreen = ({ navigation }) => {
       {/* Contêiner para centralizar a imagem responsiva */}
       <View style={styles.imageContainer}>
         <Image
-          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/bfday_bgd.png' }} // URL da imagem
+          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/saleinit.png' }} // URL da imagem
           style={styles.responsiveImage}
            // Garantir que a imagem se ajuste corretamente
         />
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
   itemContainer: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'transparent', // Não precisa de cor de fundo aqui, pois a imagem será o fundo
+    backgroundColor: '#fff', // Não precisa de cor de fundo aqui, pois a imagem será o fundo
     borderRadius: 5,
     height: 210,
     shadowColor: "#444444",
@@ -92,11 +91,15 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // Faz com que a imagem cubra toda a área do componente sem deformá-la
   },
   imageArray: {
-    width: 150,
-    height: 150,
+    width: 175,
+    height: 160,
+    /*
+    
     backgroundColor: 'rgba(255,255,255, 0.4)',
-    borderRadius: 80,
-    marginBottom: 20
+    */
+    resizeMode: 'contain', // Faz com que a imagem cubra toda a área do componente sem deformá-la
+    borderRadius: 15,
+    marginBottom: 5
   },
   innerContainer: {
     justifyContent: 'center',
@@ -118,10 +121,10 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: 'white', // Cor branca para o texto, para garantir contraste com a imagem
-    textShadowColor: 'rgba(0, 0, 0, 0.5)', // Sombras para tornar o texto mais legível
+    color: '#333', // Cor branca para o texto, para garantir contraste com a imagem
+    textShadowColor: 'rgba(0, 0, 0, 0)', // Sombras para tornar o texto mais legível
     textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 5,
+    textShadowRadius: 1,
   },
 });
 
