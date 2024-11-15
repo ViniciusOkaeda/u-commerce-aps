@@ -37,7 +37,7 @@ const FavoriteScreen = ({ navigation }) => {
                     </View>
                 </View>
                 <TouchableOpacity style={styles.favoriteButton}>
-                    <Icon name="heart" size={16} color="#628DB4" /> 
+                    <Icon name="heart" size={16} color="#44f2a7" /> 
                 </TouchableOpacity>
             </View>
         </TouchableOpacity>

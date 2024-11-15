@@ -8,10 +8,11 @@ const HomeScreen = ({navigation}) => {
   
   // Array de imagens para o carousel
   const images = [
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/offer1.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/offer2.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/offer3.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/offer4.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/collection1.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/collection2.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/collection3.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/collection4.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/collection5.png' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0); // Estado para controlar o índice da imagem atual
@@ -37,7 +38,7 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.containerImage}>
           <Image style={styles.image} source={{ uri: item.products_image }} />
           <TouchableOpacity style={styles.containerImageFavoriteButton}>
-            <Icon name="heart" size={16} color="#628DB4" />
+            <Icon name="heart" size={16} color="#44f2a7" />
           </TouchableOpacity>
         </View>
 
@@ -63,7 +64,7 @@ const HomeScreen = ({navigation}) => {
       {/* Imagem acima do carousel */}
       <View style={styles.bottomImageContainer}>
         <Image
-          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/saleinit.png' }} // Insira o URL da imagem desejada
+          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/promoblack.jpg' }} // Insira o URL da imagem desejada
           style={styles.bottomImage}
         />
       </View>
@@ -92,7 +93,7 @@ const HomeScreen = ({navigation}) => {
               key={index}
               style={[
                 styles.indicator,
-                index === currentIndex && { backgroundColor: '#628DB4', width: 10 },
+                index === currentIndex && { backgroundColor: '#44f2a7', width: 10 },
               ]}
             />
           ))}
@@ -102,7 +103,7 @@ const HomeScreen = ({navigation}) => {
       {/* Imagem abaixo do carousel */}
       <View style={styles.bottomImageContainer2}>
         <Image
-          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/supersale.png' }} // Insira o URL da imagem desejada
+          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/destaques2.png' }} // Insira o URL da imagem desejada
           style={styles.bottomImage2}
         />
       </View>
@@ -237,6 +238,7 @@ const styles = StyleSheet.create({
     height: 90, // Altura ajustada da imagem
     resizeMode: 'cover', // Ajuste para manter a proporção
     marginTop: 20
+
   },
 });
 

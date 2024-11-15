@@ -10,12 +10,13 @@ const ProductsByCategory = ({ route, navigation }) => {
   
   // Array de imagens para o carousel
   const images = [
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/promo1.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/promo2.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/promo3.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/promo4.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/promo5.png' },
-    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/promo6.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant1.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant2.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant3.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant4.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant5.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant6.png' },
+    { url: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/plant7.png' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0); // Estado para controlar o índice da imagem atual
@@ -41,7 +42,7 @@ const ProductsByCategory = ({ route, navigation }) => {
         <View style={styles.containerImage}>
           <Image style={styles.image} source={{ uri: item.products_image }} />
           <TouchableOpacity style={styles.containerImageFavoriteButton}>
-            <Icon name="heart" size={16} color="#628DB4" />
+            <Icon name="heart" size={16} color="#44f2a7" />
           </TouchableOpacity>
         </View>
 
@@ -89,7 +90,7 @@ const ProductsByCategory = ({ route, navigation }) => {
               key={index}
               style={[
                 styles.indicator,
-                index === currentIndex && { backgroundColor: '#628DB4', width: 10 },
+                index === currentIndex && { backgroundColor: '#44f2a7', width: 10 },
               ]}
             />
           ))}
@@ -99,7 +100,7 @@ const ProductsByCategory = ({ route, navigation }) => {
       {/* Imagem abaixo do carousel */}
       <View style={styles.bottomImageContainer}>
         <Image
-          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce/refs/heads/main/src/Assets/sale_img.png' }} // Insira o URL da imagem desejada
+          source={{ uri: 'https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/destaques1.png' }} // Insira o URL da imagem desejada
           style={styles.bottomImage}
         />
       </View>
