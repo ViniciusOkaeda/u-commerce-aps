@@ -6,7 +6,6 @@ import CategoryScreen from './src/Screens/Category/category';
 import FavoriteScreen from './src/Screens/Favorite/favorite';
 import ProductScreen from './src/Screens/Product/product';
 import ProductsByCategory from './src/Screens/Category/Products/products';
-import ARSceneEcommerce from './src/Screens/ARScene/ars';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 
@@ -21,19 +20,27 @@ const FavoriteStack = createNativeStackNavigator();
 const ProfileStack = createNativeStackNavigator();
 
 const stackScreenOptions = {
-  headerStyle: { backgroundColor: '#628DB4' },
+  headerStyle: { backgroundColor: '#304a3e' },
   headerTintColor: '#fff',
   headerTitleAlign: 'center',
 };
 
+/*
+rgb(167, 212, 142)
+#a7d48e
+
+#44f2a7
+rgb(68, 242, 167)
+*/
+
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="light-content" backgroundColor="#007bff" />
+      <StatusBar barStyle="light-content" backgroundColor="#304a3e" />
       <Tab.Navigator
         screenOptions={{ 
           headerShown: false, 
-          tabBarActiveTintColor: '#628DB4', 
+          tabBarActiveTintColor: '#304a3e', 
           tabBarStyle: { backgroundColor: '#fff' } // Optional: custom tabBarStyle
         }}
       >
@@ -51,7 +58,6 @@ export default function App() {
               <HomeStack.Screen name="Home" component={HomeScreen} />
               <HomeStack.Screen name="Detalhes do Produto" 
               component={ProductScreen}  />
-              <HomeStack.Screen name="Experimente seu Produto" component={ARSceneEcommerce} />
             </HomeStack.Navigator>
           )}
         </Tab.Screen>
@@ -76,8 +82,6 @@ export default function App() {
               <CategoryStack.Screen 
               name="Detalhes do Produto" 
               component={ProductScreen} 
-              />
-              <CategoryStack.Screen name="Experimente seu Produto" component={ARSceneEcommerce} 
               />
             </CategoryStack.Navigator>
           )}
