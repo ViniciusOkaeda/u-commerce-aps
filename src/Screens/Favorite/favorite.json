@@ -2,27 +2,21 @@
     "favorites": [
         {
             "id": "1",
-            "name": "Jaqueta Jeans",
-            "price": "R$37.90",
-            "sizes": ["P", "M", "G"],
-            "colors": ["rgb(190,65,65)", "rgb(84, 110, 182)", "rgb(175, 123, 73)"],
-            "image": "jeans_destaque.png"
+            "name": "Muda de Rosa do Deserto",
+            "price": "R$79,99",
+            "image": "img1.jpg"
         },
         {
             "id": "2",
-            "name": "Suéter Rosa",
-            "price": "R$35.90",
-            "sizes": ["P", "M"],
-            "colors": ["rgb(190,65,65)", "rgb(84, 110, 182)", "rgb(61, 135, 72)", "rgb(175, 123, 73)"],
-            "image": "sueter_destaque2.png"
+            "name": "Muda de Orquídea Baunilha",
+            "price": "R$179,99",
+            "image": "img2.jpg"
         },
         {
             "id": "3",
-            "name": "Suéter Cinza",
-            "price": "R$45.90",
-            "sizes": ["P", "M", "G", "GG"],
-            "colors": ["rgb(190,65,65)", "rgb(84, 110, 182)", "rgb(61, 135, 72)", "rgb(175, 123, 73)"],
-            "image": "jaqueta_destaque.png"
+            "name": "Muda de Antúrio Vermelho",
+            "price": "R$129,99",
+            "image": "img3.jpg"
         }
     ]
 }

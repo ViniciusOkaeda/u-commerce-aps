@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native';
 import favoriteData from './favorite.json';
-import JeansDestaque from "../../Assets/jeans_destaque.png";
-import SueterDestaque2 from '../../Assets/sueter_destaque2.png';
-import JaquetaDestaque from '../../Assets/jaqueta_destaque.png';
+import ImgDestaque from "../../Assets/img1.jpg";
+import ImgDestaque2 from '../../Assets/img2.jpg';
+import ImgDestaque3 from '../../Assets/img3.jpg';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 
 const imageMap = {
-    "jeans_destaque.png": JeansDestaque,
-    "sueter_destaque2.png": SueterDestaque2,
-    "jaqueta_destaque.png": JaquetaDestaque,
+    "img1.jpg": ImgDestaque,
+    "img2.jpg": ImgDestaque2,
+    "img3.jpg": ImgDestaque3,
 };
 
 const FavoriteScreen = ({ navigation }) => {
@@ -21,20 +21,7 @@ const FavoriteScreen = ({ navigation }) => {
                 <View style={styles.productDetails}>
                     <Text style={styles.productName}>{item.name}</Text>
                     <Text style={styles.productPrice}>{item.price}</Text>
-                    <View style={styles.sizesContainer}>
-                        <Text style={styles.sizeLabel}>Tamanhos:</Text>
-                        {item.sizes.map((size, index) => (
-                            <Text key={index} style={styles.sizeText}>{size}</Text>
-                        ))}
-                    </View>
-                    <View style={styles.colorsContainer}>
-                        <Text style={styles.colorLabel}>Cores Disponíveis:</Text>
-                        <View style={styles.colorCircles}>
-                            {item.colors.map((color, index) => (
-                                <View key={index} style={[styles.colorCircle, { backgroundColor: color }]} />
-                            ))}
-                        </View>
-                    </View>
+
                 </View>
                 <TouchableOpacity style={styles.favoriteButton}>
                     <Icon name="heart" size={16} color="#44f2a7" /> 
@@ -143,7 +130,7 @@ const styles = StyleSheet.create({
         marginTop: 5,
         padding: 8,
         borderWidth: 1,
-        borderColor: 'rgb(121, 179, 242)',
+        borderColor: 'rgb(48, 74, 63)',
         borderRadius: 50,
     },
 });

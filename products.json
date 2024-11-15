@@ -3,102 +3,77 @@
         {
             "products_id": 1,
             "products_name": "Muda de Rosa do Deserto",
-            "products_description": "Mergulhe na nostalgia e adicione um toque de charme retrô ao seu guarda-roupa com nosso exclusivo suéter vintage. Feito com um tecido macio e aconchegante, este suéter não apenas oferece conforto, mas também traz um estilo atemporal que nunca sai de moda.",
+            "products_description": "Ao adquirir uma muda de Rosa do Deserto, você estará investindo em uma planta de grande beleza e durabilidade, que se tornará um verdadeiro destaque no seu espaço. Sua forma compacta e sua resistência tornam-na ideal também para cultivo em vasos, tanto em ambientes externos quanto internos, proporcionando um charme exótico a qualquer ambiente.",
             "products_price": "79,99",
-            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/sueter_destaque.jpg",
+            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img1.jpg",
             "products_category": 1,
             "images": [
                 {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59534.jpg"
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img1.jpg"
                 },
                 {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59525.jpg"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59346.jpg"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59251.jpg"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59188.jpg"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59182.jpg"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59178.jpg"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/2147704075.png"
-                },
-                {
-                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/59181.jpg"
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img1.jpg"
                 }
             ]
         },
         {
             "products_id": 2,
             "products_name": "Muda de Orquídea Baunilha",
-            "products_description": "",
+            "products_description": "A Orquídea Baunilha é uma planta trepadeira, que cresce de forma vertical e exige suporte para se desenvolver adequadamente. Suas flores, que aparecem de forma esporádica, são pequenas, mas de uma delicadeza impressionante, com pétalas de tom creme e uma fragrância suave, característica da baunilha. Após a floração, ela produz as vagens, que, quando maduras, são colhidas e processadas para a extração do sabor e aroma da baunilha.",
             "products_price": "179,99",
-            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/jeans_destaque.png",
+            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img2.jpg",
             "products_category": 1,
             "images": [
                 {
-                    "images_url": "sueter1"
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img2.jpg"
+                },
+                {
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img2.jpg"
                 }
             ]
         },
         {
             "products_id": 3,
             "products_name": "Muda de Antúrio Vermelho",
-            "products_description": "",
+            "products_description": "O Antúrio é uma planta perene, de fácil cuidado e grande durabilidade. Suas flores, que são, na verdade, modificações das folhas chamadas espatas, têm uma aparência exótica e podem durar por semanas, tornando-a uma das plantas florais mais apreciadas. Além do vermelho tradicional, o Antúrio também pode apresentar flores em tons de branco, rosa e roxo, mas a versão vermelha é, sem dúvida, a mais popular e emblemática.",
             "products_price": "129,99",
-            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/jaqueta_destaque.png",
+            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img3.jpg",
             "products_category": 1,
             "images": [
                 {
-                    "images_url": "sueter1"
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img3.jpg"
+                },
+                {
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img3.jpg"
                 }
             ]
         },
         {
             "products_id": 4,
             "products_name": "Pá de Jardineiro",
-            "products_description": "",
+            "products_description": "A Pá de Jardineiro é uma ferramenta prática e indispensável para quem busca manter seu jardim bem cuidado e bonito. Com um design ergonômico e robusto, ela foi projetada para facilitar o plantio, o replantio, a escavação e o transporte de terra, areia e outros materiais. Seja para preparar o solo, cavar buracos ou fazer pequenos ajustes, a pá é uma das ferramentas mais versáteis e essenciais para quem cuida de plantas e jardins com dedicação.",
             "products_price": "229,99",
-            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/jaqueta_destaque3.png",
+            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img4.jpg",
             "products_category": 2,
             "images": [
                 {
-                    "images_url": "sueter1"
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img4.jpg"
+                },
+                {
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img4.jpg"
                 }
             ]
         },
         {
             "products_id": 5,
-            "products_name": "Suéter Classic",
-            "products_description": "",
-            "products_price": "99,99",
-            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/sueter_destaque2.png",
-            "products_category": 2,
-            "images": [
-                {
-                    "images_url": "sueter1"
-                }
-            ]
-        },
-        {
-            "products_id": 6,
             "products_name": "Vaso c/ planta artificial",
-            "products_description": "",
+            "products_description": "O Vaso com Planta Artificial é a solução perfeita para quem deseja adicionar um toque de verde e sofisticação ao ambiente sem se preocupar com cuidados constantes. Combinando a praticidade das plantas artificiais com o charme de um vaso elegante, essa peça é ideal para decoração de interiores, escritórios, salas de estar, varandas e qualquer outro espaço que precise de um toque de frescor e estilo.",
             "products_price": "179,99",
-            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/e-commerce-ra-mobile/refs/heads/main/src/Assets/jaqueta_destaque2.png",
+            "products_image": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img5.jpg",
             "products_category": 3,
             "images": [
                 {
-                    "images_url": "sueter1"
+                    "images_url": "https://raw.githubusercontent.com/ViniciusOkaeda/u-commerce-aps/refs/heads/main/src/Assets/img5.jpg"
                 }
             ]
         }

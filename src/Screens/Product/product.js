@@ -69,31 +69,14 @@ const ProductScreen = ({ route, navigation }) => {
               {item.products_description}
             </Text>
             <Text style={styles.price}>R$ {item.products_price}</Text>
-            <Text style={styles.additionalInfoTitle}>Tamanhos:</Text>
-            <View style={styles.optionsContainer}>
-              {item.sizes.map((size, index) => (
-                <View key={index} style={styles.circle}>
-                  <Text style={styles.optionText}>{size.sizes_name}</Text>
-                </View>
-              ))}
-            </View>
 
-
-            <Text style={styles.additionalInfoTitle}>Cores disponíveis:</Text>
-            <View style={styles.optionsContainer}>
-              {item.colors.map((color, index) => (
-                <View key={index} style={[styles.circle, { backgroundColor: color.colors_name }]}>
-                  <Text style={styles.optionText} />
-                </View>
-              ))}
-            </View>
 
             <View style={styles.tryProductContainer}>
               <TouchableOpacity style={styles.tryProductButton}
                 onPress={() => {
                 }}
               >
-                <Text style={styles.tryProductText}>Provar Produto</Text>
+                <Text style={styles.tryProductText}>Comprar Produto</Text>
               </TouchableOpacity>
 
 
@@ -153,7 +136,7 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#FF5733',
+    color: '#CE6A19',
     marginBottom: 15,
   },
   additionalInfoTitle: {
@@ -192,7 +175,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     height: 50,
-    backgroundColor: "#144877"
+    backgroundColor: "#44f2a7"
   },
   tryProductText: {
     color: "#fff",

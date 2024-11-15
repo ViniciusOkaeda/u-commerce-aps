@@ -110,7 +110,7 @@ const HomeScreen = ({navigation}) => {
 
       {/* Lista de Produtos */}
       <FlatList
-        data={customData.data.filter(e => e.products_category === 2)}
+        data={customData.data.filter(e => e.products_category === 1)}
         renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}
         numColumns={2}
