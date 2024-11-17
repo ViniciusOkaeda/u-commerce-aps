@@ -1,10 +1,35 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity, Dimensions, ScrollView, ImageBackground } from 'react-native';
-import customData from "./category.json";
+import { GetCategories } from '../../Service/calls';
 
 const screenWidth = Dimensions.get('window').width;
 
 const CategoryScreen = ({ navigation }) => {
+
+  const [customData, setCustomData] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true)
+        try {
+            const result = await GetCategories();
+            if (result) {
+                if (result.status === 1) {
+                  setCustomData(result.response)
+                }
+            }
+        } catch (err) {
+            console.log(err.message || 'An error occurred');
+        } finally {
+            setLoading(false); // Dados carregados, então setar como false
+        }
+    };
+
+    loadData(); // Chama a função de carregamento ao montar o componente
+
+
+}, []); // Dependência vazia para garantir que loadData só seja chamado uma vez
   // Função para renderizar cada item da lista
   const renderItem = ({ item }) => {
     return (
@@ -37,6 +62,7 @@ const CategoryScreen = ({ navigation }) => {
       </View>
 
       {/* FlatList que exibe os itens abaixo da imagem */}
+      {loading === false ?
       <FlatList
         data={customData.data}
         renderItem={renderItem}
@@ -45,6 +71,8 @@ const CategoryScreen = ({ navigation }) => {
         columnWrapperStyle={styles.columnWrapper} // Estilo para o wrapper das colunas
         contentContainerStyle={styles.contentContainer}
       />
+      
+      : ""}
     </ScrollView>
   );
 };

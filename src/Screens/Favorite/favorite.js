@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native';
-import favoriteData from './favorite.json';
 import ImgDestaque from "../../Assets/img1.jpg";
 import ImgDestaque2 from '../../Assets/img2.jpg';
 import ImgDestaque3 from '../../Assets/img3.jpg';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { GetFavorites } from '../../Service/calls';
 
 
 const imageMap = {
@@ -14,6 +14,33 @@ const imageMap = {
 };
 
 const FavoriteScreen = ({ navigation }) => {
+
+    const [customData, setCustomData] = useState([])
+    const [loading, setLoading] = useState(false)
+  
+    useEffect(() => {
+      const loadData = async () => {
+        setLoading(true)
+          try {
+              const result = await GetFavorites();
+              if (result) {
+                  if (result.status === 1) {
+                    setCustomData(result.response)
+                  }
+              }
+          } catch (err) {
+              console.log(err.message || 'An error occurred');
+          } finally {
+              setLoading(false); // Dados carregados, então setar como false
+          }
+      };
+  
+      loadData(); // Chama a função de carregamento ao montar o componente
+  
+  
+  }, []); // Dependência vazia para garantir que loadData só seja chamado uma vez
+  
+
     const renderItem = ({ item }) => (
         <TouchableOpacity>
             <View style={styles.itemContainer}>
@@ -33,7 +60,7 @@ const FavoriteScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <FlatList
-                data={favoriteData.favorites}  // Usando os dados do JSON importado
+                data={customData.favorites}  // Usando os dados do JSON importado
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.listContent}

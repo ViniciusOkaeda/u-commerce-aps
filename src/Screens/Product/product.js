@@ -1,14 +1,37 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, ScrollView, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native';
-
-import customData from "../../../products.json";
+import { GetProductsById } from '../../Service/calls';
 
 const { width, height } = Dimensions.get('window');
 
 const ProductScreen = ({ route, navigation }) => {
   const itemId = route.params.itemId; // Obtém o parâmetro enviado
   const itemCategoryId = route.params.categoryItemId; // Obtém o parâmetro enviado
-  const productData = customData.data.filter(e => e.products_category === itemCategoryId && e.products_id === itemId)
+
+  const [customData, setCustomData] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true)
+        try {
+            const result = await GetProductsById(itemId);
+            if (result) {
+                if (result.status === 1) {
+                  setCustomData(result.response)
+                }
+            }
+        } catch (err) {
+            console.log(err.message || 'An error occurred');
+        } finally {
+            setLoading(false); // Dados carregados, então setar como false
+        }
+    };
+
+    loadData(); // Chama a função de carregamento ao montar o componente
+
+
+}, []); // Dependência vazia para garantir que loadData só seja chamado uma vez
 
 
   //console.log("o productData", productData)
@@ -30,6 +53,8 @@ const ProductScreen = ({ route, navigation }) => {
 
   return (
     <ScrollView style={styles.container}>
+      {loading === false ?
+      <>
       <View style={styles.carouselContainer}>
         <ScrollView
           ref={scrollViewRef}
@@ -42,13 +67,13 @@ const ProductScreen = ({ route, navigation }) => {
           }}
           scrollEventThrottle={16} // Para melhorar a performance
         >
-          {productData.map(e => e.images.map((image) => (
+          {customData.map(e => e.images.map((image) => (
             <Image key={image.id} source={{ uri: image.images_url }} style={styles.image} />
           )))}
         </ScrollView>
 
         <View style={styles.indicatorContainer}>
-          {productData.map(e => e.images.map((_, index) => (
+          {customData.map(e => e.images.map((_, index) => (
             <TouchableOpacity
               key={index}
               style={[styles.indicator, currentIndex === index && styles.activeIndicator]}
@@ -58,7 +83,7 @@ const ProductScreen = ({ route, navigation }) => {
         </View>
       </View>
 
-      {productData.map((item, idx) => {
+      {customData.map((item, idx) => {
 
 
         return (
@@ -89,6 +114,12 @@ const ProductScreen = ({ route, navigation }) => {
 
         );
       })}
+      
+      </>
+      
+      : ""}
+
+
     </ScrollView>
   );
 };

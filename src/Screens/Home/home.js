@@ -1,10 +1,36 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
-import customData from "../../../products.json";
+import { GetHomepage } from '../../Service/calls';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const { width } = Dimensions.get('window'); // Pegando a largura da tela
 const HomeScreen = ({navigation}) => {
+
+  const [customData, setCustomData] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true)
+        try {
+            const result = await GetHomepage();
+            if (result) {
+                if (result.status === 1) {
+                  setCustomData(result.response)
+                }
+            }
+        } catch (err) {
+            console.log(err.message || 'An error occurred');
+        } finally {
+            setLoading(false); // Dados carregados, então setar como false
+        }
+    };
+
+    loadData(); // Chama a função de carregamento ao montar o componente
+
+
+}, []); // Dependência vazia para garantir que loadData só seja chamado uma vez
+
   
   // Array de imagens para o carousel
   const images = [
@@ -109,6 +135,7 @@ const HomeScreen = ({navigation}) => {
       </View>
 
       {/* Lista de Produtos */}
+      {loading === false ?
       <FlatList
         data={customData.data.filter(e => e.products_category === 1)}
         renderItem={renderItem}
@@ -117,6 +144,7 @@ const HomeScreen = ({navigation}) => {
         columnWrapperStyle={styles.columnWrapper}
         contentContainerStyle={styles.contentContainer}
       />
+      : ""}
     </ScrollView>
 )
 }

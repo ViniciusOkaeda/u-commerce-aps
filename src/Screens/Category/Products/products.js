@@ -1,12 +1,38 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
-import customData from "../../../../products.json";
+import { GetProductsByCategory } from '../../../Service/calls';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const { width } = Dimensions.get('window'); // Pegando a largura da tela
 
 const ProductsByCategory = ({ route, navigation }) => {
   const { itemId } = route.params; // Obtém o parâmetro enviado
+
+  const [customData, setCustomData] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true)
+        try {
+            const result = await GetProductsByCategory(itemId);
+            if (result) {
+                if (result.status === 1) {
+                  setCustomData(result.response)
+                }
+            }
+        } catch (err) {
+            console.log(err.message || 'An error occurred');
+        } finally {
+            setLoading(false); // Dados carregados, então setar como false
+        }
+    };
+
+    loadData(); // Chama a função de carregamento ao montar o componente
+
+
+}, []); // Dependência vazia para garantir que loadData só seja chamado uma vez
+
   
   // Array de imagens para o carousel
   const images = [
@@ -106,14 +132,17 @@ const ProductsByCategory = ({ route, navigation }) => {
       </View>
 
       {/* Lista de Produtos */}
+      {loading === false ?
       <FlatList
-        data={customData.data.filter(e => e.products_category === itemId)}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => index.toString()}
-        numColumns={2}
-        columnWrapperStyle={styles.columnWrapper}
-        contentContainerStyle={styles.contentContainer}
-      />
+      data={customData.data}
+      renderItem={renderItem}
+      keyExtractor={(item, index) => index.toString()}
+      numColumns={2}
+      columnWrapperStyle={styles.columnWrapper}
+      contentContainerStyle={styles.contentContainer}
+    />
+      : ""}
+
     </ScrollView>
   );
 };
